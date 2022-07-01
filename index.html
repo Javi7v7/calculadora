@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto 1 - Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+    <div class="spaceCode">
+      <span>S</span>
+      <span>P</span>
+      <span>A</span>
+      <span>C</span>
+      <span>E</span>
+      <span>-</span>
+      <span>C</span>
+      <span>O</span>
+      <span>D</span>
+      <span>E</span>
+    </div>
+    <h1 class="proyecto">Proyecto 1 - Calculadora</h1>
+    <div class="container">
+      <h2 class="marca">Casio</h2>
+      <input class="pantalla" id="result" type="text" placeholder="0 " />
+      <div class="calculadora">
+        <button class="button" type="button" onclick="valor('7')" value="7">7</button>
+        <button class="button" type="button" onclick="valor('8')" value="8">8</button>
+        <button class="button" type="button" onclick="valor('9')" value="9">9</button>
+        
+        <button class="button" type="button" onclick="valor('4')" value="4">4</button>
+        <button class="button" type="button" onclick="valor('5')" value="5">5</button>
+        <button class="button" type="button" onclick="valor('6')" value="6">6</button>
+        <button class="button" type="button" onclick="valor('/')" value="/">&divide</button>
+        <button class="button" type="button" onclick="valor('1')" value="1">1</button>
+        <button class="button" type="button" onclick="valor('2')" value="2">2</button>
+        <button class="button" type="button" onclick="valor('3')" value="3">3</button>
+        <button class="button" type="button" onclick="valor('*')" value="-">x</button>
+        <button class="button" type="button" onclick="valor('0')" value="0">0</button>
+        <button class="button" type="button" onclick="valor('.')" value=".">.</button>
+        <button class="button" type="button" onclick="valor('=')" value="=">=</button>
+        <button class="button" type="button" onclick="valor('-')" value="-">-</button>
+        <button class="buttonmas" type="button" onclick="valor('+')" value="+">+</button>
+      </div>
+    </div>
+  
+    <!--<button
+      class="button"
+      type="button"
+      style="background-color: #fb0066"
+      onclick="calcular()"
+    >
+      =
+    </button>-->
+    <!--<input class="button" type="button" value="=" onclick="calcular()" style="background-color: #fb0066;"/>-->
+
+   
+    <script src="logica.js"></script>
+  </body>
+</html>
