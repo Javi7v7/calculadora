@@ -94,9 +94,10 @@ function calcular(){
       }
   } while (correr);
 };*/
-function obtenerValor(){
+// funcion para obtener la cadena con el boton igual
+function obtenerCadena(){
   const entrada = document.getElementById("num1").value;
-  calcular(entrada);
+  calcular1(entrada);
 }
 
 // funcion para calcular el resultado
@@ -168,6 +169,42 @@ function calcular(entrada) {
    return document.getElementById("num1").value = calculo; // salida de calculo
 
 }  // fin de funcion calculoSinEval()
+function calcular(cadena){
+  var expRegularNum = /[\d|.|]+/; // expresion regular para numeros int / flotante
+  var expReguarOper = /[-|\|+|-|*|//]/; // expresion regular para operadores + - * /
+  let num1 = 0;
+  let num2 = 0;
+  let operador = '';
+
+  num1 = cadena.match(expRegularNum);
+  cadena = cadena.replace('');
+  operador = cadena.match(expReguarOper);
+  cadena = cadena.replace('');
+  num2 = cadena.match(expRegularNum);
+  cadena = cadena.replace('');
+  
+  operador = operador.toString();
+
+  switch (operador){
+    case '+':
+      resultado = parseFloat(num1) + parseFloat(num2);
+      break;
+    case '-':
+      resultado = parseFloat(num1) - parseFloat(num2);
+      break
+    case '*':
+      resultado = parseFloat(num1) * parseFloat(num2);
+      break;
+    case '/':
+      resultado = parseFloat(num1) / parseFloat(num2);
+      break;
+  }
+
+  return document.getElementById("num1").value = resultado; // salida de calculo
+
+
+
+}
 /*const getValueInput = () =>{
     let inputValue = document.getElementById("numero1").value + document.getElementById("numero2").innerHTML = inputValue; 
   }*/
