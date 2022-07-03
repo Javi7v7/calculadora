@@ -23,7 +23,8 @@
     <h1 class="proyecto">Proyecto 1 - Calculadora</h1>
     <div class="container">
       <h2 class="marca">Casio</h2>
-      <input class="pantalla" id="result" type="text" placeholder="0 " />
+      <!--<input class="numero2" id="num2" type="text" placeholder="0" />-->
+      <input class="numero1" id="num1" type="text" placeholder="0 " />
       <div class="calculadora">
         <button class="button" type="button" onclick="valor('7')" value="7">7</button>
         <button class="button" type="button" onclick="valor('8')" value="8">8</button>
@@ -39,9 +40,9 @@
         <button class="button" type="button" onclick="valor('*')" value="-">x</button>
         <button class="button" type="button" onclick="valor('0')" value="0">0</button>
         <button class="button" type="button" onclick="valor('.')" value=".">.</button>
-        <button class="button" type="button" onclick="valor('=')" value="=">=</button>
+        <button class="button" type="button" onclick="obtenerValor('=')" value="=">=</button>
         <button class="button" type="button" onclick="valor('-')" value="-">-</button>
-        <button class="buttonmas" type="button" onclick="valor('+')" value="+">+</button>
+        <button class="button" type="button" onclick="valor('+')" value="+">+</button>
       </div>
     </div>
   
@@ -56,6 +57,6 @@
     <!--<input class="button" type="button" value="=" onclick="calcular()" style="background-color: #fb0066;"/>-->
 
    
-    <script src="logica.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
