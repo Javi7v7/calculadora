@@ -28,38 +28,6 @@ for (let i = 1; i < tope; i++) {
 }
 document.write("El resultado de la operación es: " + resultado);
 */
-function suma(){
-    let numero1 = document.getElementById("numero1").value;
-    let numero2 = document.getElementById("numero2").value;
-    resultado = parseInt(numero1) + parseInt(numero2);
-    //document.writeln(resultado);
-    document.getElementById("valueInput").innerHTML = resultado;
-}
-
-function resta(){
-  let numero1 = document.getElementById("numero1").value;
-  let numero2 = document.getElementById("numero2").value;
-  resultado = parseInt(numero1) - parseInt(numero2);
-  //document.writeln(resultado);
-  document.getElementById("valueInput").innerHTML = resultado;
-}
-
-function multiplicacion(){
-  let numero1 = document.getElementById("numero1").value;
-  let numero2 = document.getElementById("numero2").value;
-  resultado = parseInt(numero1) * parseInt(numero2);
-  //document.writeln(resultado);
-  document.getElementById("valueInput").innerHTML = resultado;
-}
-
-function division(){
-  let numero1 = document.getElementById("numero1").value;
-  let numero2 = document.getElementById("numero2").value;
-  resultado = parseInt(numero1) / parseInt(numero2);
-  //document.writeln(resultado);
-  document.getElementById("valueInput").innerHTML = resultado;
-}
-
 function clearScreen(){
   document.getElementById("num1").value = '';
 }
@@ -97,7 +65,7 @@ function calcular(){
 // funcion para obtener la cadena con el boton igual
 function obtenerCadena(){
   const entrada = document.getElementById("num1").value;
-  calcular1(entrada);
+  calcular(entrada);
 }
 
 // funcion para calcular el resultado
@@ -168,43 +136,8 @@ function calcular(entrada) {
 
    return document.getElementById("num1").value = calculo; // salida de calculo
 
-}  // fin de funcion calculoSinEval()
-function calcular(cadena){
-  var expRegularNum = /[\d|.|]+/; // expresion regular para numeros int / flotante
-  var expReguarOper = /[-|\|+|-|*|//]/; // expresion regular para operadores + - * /
-  let num1 = 0;
-  let num2 = 0;
-  let operador = '';
+}  // fin de funcion calculo()
 
-  num1 = cadena.match(expRegularNum);
-  cadena = cadena.replace('');
-  operador = cadena.match(expReguarOper);
-  cadena = cadena.replace('');
-  num2 = cadena.match(expRegularNum);
-  cadena = cadena.replace('');
-  
-  operador = operador.toString();
-
-  switch (operador){
-    case '+':
-      resultado = parseFloat(num1) + parseFloat(num2);
-      break;
-    case '-':
-      resultado = parseFloat(num1) - parseFloat(num2);
-      break
-    case '*':
-      resultado = parseFloat(num1) * parseFloat(num2);
-      break;
-    case '/':
-      resultado = parseFloat(num1) / parseFloat(num2);
-      break;
-  }
-
-  return document.getElementById("num1").value = resultado; // salida de calculo
-
-
-
-}
 /*const getValueInput = () =>{
     let inputValue = document.getElementById("numero1").value + document.getElementById("numero2").innerHTML = inputValue; 
   }*/
